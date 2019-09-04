@@ -1,5 +1,7 @@
 package com.platzi.reservation.controller.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,6 +35,10 @@ public class ClientService {
 	
 	public ClientDTO findByIdentification(String identification) {
 		return this.clientRepository.findByIdentification(identification);
+	}
+	
+	public List<ClientDTO> findAll() {
+		return this.clientRepository.findAll();
 	}
 	
 }
